@@ -1,0 +1,27 @@
+// VARIABLES
+$grey: #eef1f1;
+$mazarine-blue: #273c75;
+
+.hero.is-large .hero-body.main-hero {
+  padding-bottom: 22rem;
+  padding-top: 22rem;
+}
+
+.grey-bg {
+  background: $grey;
+}
+
+// World Map
+.world-map {
+  filter: invert(.5) sepia(1) saturate(100) hue-rotate(200deg);
+}
+
+// Push the first card up into the hero
+
+.card.first {
+  margin: -125px auto 30px;
+}
+
+.card {
+  padding: 60px;
+}

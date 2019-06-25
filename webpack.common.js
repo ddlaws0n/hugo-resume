@@ -53,7 +53,12 @@ module.exports = {
         from: "./src/fonts/",
         to: "fonts/",
         flatten: true
-      }
+      },
+      {
+        from: "./src/img/",
+        to: "img/",
+        flatten: true
+      },
     ])
   ]
 };

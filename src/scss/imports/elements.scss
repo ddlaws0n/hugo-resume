@@ -1,0 +1,64 @@
+// HR border`
+$hr-height: 2px;
+$hr-line-color: currentColor;
+$hr-content-color: currentColor;
+
+hr {
+  height: $hr-height;
+  overflow: visible;
+  color: #999;
+  position: relative;
+  margin: 2em auto;
+
+  &::before {
+    content: '';
+    background: linear-gradient(to right, transparent, $hr-line-color, transparent);
+    height: $hr-height;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  &[data-content] {
+    text-align: center;
+
+    &::before {}
+    &::after {
+      content: attr(data-content);
+      position: relative;
+      background: $white;
+      padding: 0 1.5rem;
+      top: -0.475em;
+      font-size: 3em;
+      line-height: 1;
+      font-family: serif;
+      font-style: italic;
+      color: $hr-content-color;
+    }
+  }
+}
+
+// Line dividers for titles
+
+.line-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-divider:after,
+.line-divider:before {
+  content: '';
+  height: 1.5px;
+  background: #c6c6c6;
+}
+
+.line-divider:before {
+  flex: 1;
+  margin: 0 0.45em 0 0;
+}
+
+.line-divider:after {
+  flex: 1;
+  margin: 0 0 0 0.45em;
+}

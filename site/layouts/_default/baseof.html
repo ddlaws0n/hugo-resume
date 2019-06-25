@@ -9,7 +9,7 @@
 
   {{ $stylesheet := .Site.Data.webpack.main }}
   {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
+  <link href="{{ relURL . }}" rel="stylesheet">
   {{ end }}
 </head>
 
@@ -17,13 +17,15 @@
 
   {{ block "header" . }}{{ partial "header" . }}{{end}}
 
-  {{ block "main" . }}{{end}}
+  <main>
+    {{ block "main" . }}{{end}}
+  </main>
 
   {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 
   {{ $script := .Site.Data.webpack.main }}
   {{ with $script.js }}
-    <script src="{{ relURL . }}"></script>
+  <script src="{{ relURL . }}"></script>
   {{ end }}
 </body>
 

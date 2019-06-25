@@ -1,9 +1,93 @@
 {{ define "main" }}
 
-<h1>Hugo with Webpack, Sass, and PostCSS</h1>
-
-<h3>Hooray 🎉 - you've built this with <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!</h3>
-
-<a href="{{ "/tech" | relURL }}">Check out the tech</a>
+<section class="hero is-primary is-large">
+  <div class="hero-body main-hero">
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="container has-text-centered">
+      <h1 class="title">This is my resume website</h1>
+      <h2 class="subtitle">Professional</h2>
+    </div>
+  </div>
+</section>
+<section class="section grey-bg">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-full">
+        <div class="card first">
+          <header class="line-divider">
+            <h2 class="card-header-title title is-centered">My current projects</h2>
+          </header>
+          <div class="card-content">
+            <div class="columns">
+              <div class="column is-one-quarter has-text-centered">
+                <img src="./img/Finalsite.png" alt="Finalsite" class="is-responsive">
+              </div>
+              <div class="column is-three-quarters">
+                <p class="title">Finalsite</p>
+                <p class="subtitle">2018-Present</p>
+                <p style="margin-top:10px">Finalsite is the global leading provider of web education technology solutions.
+                  We work with schools and Higher Ed institutions across the world, providing website services and a best-in-class marketing
+                  communications platform.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="card">
+          <header class="line-divider">
+            <h2 class="card-header-title title is-centered">What I've worked on</h2>
+          </header>
+          <div class="card-content">
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <img src="./img/Nila.jpg" alt="Nila" class="is-responsive">
+              </div>
+              <div class="column is-three-quarters">
+                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are going to go.”</p>
+                <p style="margin-top:10px">David D Lawson</p>
+              </div>
+            </div>
+            <hr data-content="&amp;" />
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <img src="./img/SDW.jpg" alt="SDW" class="is-responsive">
+              </div>
+              <div class="column is-three-quarters">
+                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are going to go.”</p>
+                <p style="margin-top:10px">David D Lawson</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section test">
+  <div class="container">
+    <img src="./svg/world-map.svg" alt="Kiwi standing on oval" class="world-map">
+  </div>
+</section>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
 
 {{ end }}

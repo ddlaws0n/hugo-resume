@@ -1,22 +1,14 @@
 {{ define "main" }}
-
-<section class="hero is-primary is-large">
+<section id="hero" class="hero is-primary is-large">
+  <div id="particles-js"></div>
   <div class="hero-body main-hero">
-    <ul class="bg-bubbles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
     <div class="container has-text-centered">
-      <h1 class="title">This is my resume website</h1>
-      <h2 class="subtitle">Professional</h2>
+      <p>Hi, I'm</p>
+      <figure class="image is-300x300 is-inline-block">
+        <img class="is-rounded" src="./img/ProfilePicture.jpg">
+      </figure>
+      <h1 class="title">David D Lawson</h1>
+      <h2 class="subtitle">Project Manager</h2>
     </div>
   </div>
 </section>
@@ -24,7 +16,7 @@
   <div class="container">
     <div class="columns is-multiline">
       <div class="column is-full">
-        <div class="card first">
+        <div class="card">
           <header class="line-divider">
             <h2 class="card-header-title title is-centered">My current projects</h2>
           </header>
@@ -36,8 +28,10 @@
               <div class="column is-three-quarters">
                 <p class="title">Finalsite</p>
                 <p class="subtitle">2018-Present</p>
-                <p style="margin-top:10px">Finalsite is the global leading provider of web education technology solutions.
-                  We work with schools and Higher Ed institutions across the world, providing website services and a best-in-class marketing
+                <p style="margin-top:10px">Finalsite is the global leading provider of web education technology
+                  solutions.
+                  We work with schools and Higher Ed institutions across the world, providing website services and a
+                  best-in-class marketing
                   communications platform.</p>
               </div>
             </div>
@@ -55,7 +49,8 @@
                 <img src="./img/Nila.jpg" alt="Nila" class="is-responsive">
               </div>
               <div class="column is-three-quarters">
-                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are going to go.”</p>
+                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are
+                  going to go.”</p>
                 <p style="margin-top:10px">David D Lawson</p>
               </div>
             </div>
@@ -65,7 +60,8 @@
                 <img src="./img/SDW.jpg" alt="SDW" class="is-responsive">
               </div>
               <div class="column is-three-quarters">
-                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are going to go.”</p>
+                <p class="subtitle">“If I want to keep my template similar, this is where my previous experiences are
+                  going to go.”</p>
                 <p style="margin-top:10px">David D Lawson</p>
               </div>
             </div>
@@ -75,19 +71,30 @@
     </div>
   </div>
 </section>
-<section class="section test">
+<section class="section" id="map-section">
   <div class="container">
-    <img src="./svg/world-map.svg" alt="Kiwi standing on oval" class="world-map">
-  </div>
+    <div class="map">
+      <img src="./svg/world-map.svg" alt="World Map" class="world-map">
+      <div id="pin-1" class="box"><a href="#popup1"><img src="./svg/pin.svg"></a></div>
+      <div id="pin-2" class="box"><a href="#popup1"><img src="./svg/pin.svg"></a></div>
+      <div id="pin-3" class="box"><a href="#popup1"><img src="./svg/pin.svg"></a></div>
+      <div id="popup1" class="overlay">
+        <div class="card popup">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <a class="close" href="#map-section">&times;</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a></p>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-  </div>
-</footer>
-
 {{ end }}

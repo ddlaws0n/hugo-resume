@@ -3,25 +3,116 @@ $grey: #eef1f1;
 $mazarine-blue: #273c75;
 
 .hero.is-large .hero-body.main-hero {
-  padding-bottom: 22rem;
-  padding-top: 22rem;
+  background: linear-gradient(45deg, $mazarine-blue, #2980b9);
+  padding-bottom: 14rem;
+  padding-top: 14rem;
 }
 
 .grey-bg {
   background: $grey;
 }
 
-// World Map
-.world-map {
-  filter: invert(.5) sepia(1) saturate(100) hue-rotate(200deg);
-}
-
 // Push the first card up into the hero
-
-.card.first {
+.section.grey-bg .card:first-child {
   margin: -125px auto 30px;
 }
 
-.card {
+.section.grey-bg .card {
   padding: 60px;
 }
+
+// Custom Image Size
+
+.image.is-300x300 {
+  height: 300px;
+  width: 300px;
+}
+
+// World Map
+.map img {
+  max-width:100%;
+  display: block;
+}
+
+.world-map {
+  filter: invert(73%) sepia(54%) saturate(6448%) hue-rotate(178deg) brightness(96%) contrast(78%);
+  opacity: 100%;
+}
+
+.box img {
+  filter: invert(44%) sepia(20%) saturate(4284%) hue-rotate(333deg) brightness(90%) contrast(101%);
+  width:5%;
+  height:5%;
+  // background-image: url(/svg/pin.svg);
+  // background-position: top center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  position: absolute;
+  transform: rotate(20deg);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#pin-1 img {
+  top:25%;
+  left:45%;
+}
+
+#pin-2 img {
+  top:29.45%;
+  left:47.7%;
+}
+
+#pin-3 img {
+  top:60%;
+  left:55%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card.popup {
+  margin: 70px auto;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  @include mobile {
+    margin: 20px auto;
+    width: 70%;
+  }
+  @include tablet-only {
+    margin: 40px auto;
+    width: 50%;
+  }
+}
+
+.popup .close {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  transition: all 400ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: $grey;
+}
+// .popup .content {
+//   max-height: 30%;
+//   overflow: auto;
+// }

@@ -1,6 +1,9 @@
 // JS Goes here - ES6 supported
+require("particles.js");
 
 import "./scss/main.scss";
 
-// Say hello
-console.log("🦊 Hello! Edit me in src/index.js");
+// particlesJS.load(@dom-id, @path-json, @callback (optional));
+particlesJS.load('particles-js', 'particles.json', function () {
+    console.log('callback - particles.js config loaded');
+});
